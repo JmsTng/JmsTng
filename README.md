@@ -1,5 +1,5 @@
 ### Nice to meet you!
-![JmsTng's card name](https://cardivo.vercel.app/api?name=JmsTng&description=Hobbyist%20Developer&image=https://avatars.githubusercontent.com/u/95390086?s=400&v=4&pattern=fallingTriangles&fontColor=%e2fafacc)
+![JmsTng's card name](https://cardivo.vercel.app/api?name=JmsTng&description=Hobbyist%20Developer&image=https://avatars.githubusercontent.com/u/95390086?s=400&v=4&pattern=topography&fontColor=%e2fafacc)
 
 <!--
 **JmsTng/JmsTng** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
