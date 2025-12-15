@@ -1,0 +1,240 @@
+/*
+ * atkinson hyperlegible mono
+ * jetbrains mono
+ * space mono
+ * dm mono
+ * fira mono
+ * anonymous pro
+ * overpass mono
+ * azeret mono
+ * ubuntu sans mono
+ * sometype mono
+ */
+
+:root {
+    --bio-pad: 5em;
+
+    --red: #ff3040;
+    --green: #35ff30;
+    --blue: #10bbff;
+    --yellow: #ffdd20;
+
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.25em;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #272624;
+
+    scroll-behavior: smooth;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility Classes */
+.small {
+    font-size: 40%;
+}
+
+.r {
+    color: var(--red);
+}
+.b {
+    color: var(--blue);
+}
+.g {
+    color: var(--green);
+}
+.y {
+    color: var(--yellow);
+}
+
+.center-block {
+    text-align: center;
+}
+
+.mute {
+    color: #909090;
+    font-style: italic;
+}
+
+.dash {
+    list-style-type: "-  ";
+}
+
+.hover {
+    transition: all 0.5s;
+    text-decoration: underline;
+}
+
+.hover:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rev1 {
+    animation: flip1 1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+.rev2 {
+    animation: flip2 1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+/* Tags */
+body {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0.4em;
+}
+
+svg {
+    display: inline;
+}
+
+.section {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.section > h1 > a {
+    text-underline-offset: 0.25em;
+}
+
+.icon {
+    height: 1em;
+    width: 1em;
+}
+
+#cube-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition:
+        left 0.5s,
+        width 0.5s;
+}
+
+#home {
+    height: 300vh;
+}
+
+#scrollhint {
+    position: fixed;
+
+    width: 100vw;
+    top: 25%;
+
+    opacity: 0;
+
+    transition: opacity 0.5s;
+    animation: bounce 3s linear infinite;
+}
+
+#bio {
+    position: fixed;
+    display: flex;
+
+    flex-direction: column;
+
+    opacity: 0;
+
+    width: 50vw;
+    margin-top: calc(50vh + 4em);
+    margin-left: calc(25vw);
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: fade 1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+#links > a {
+    position: relative;
+    top: -2em;
+}
+
+#contact > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#contact > a:visited {
+    color: #909090;
+}
+
+#contact > a > span {
+    vertical-align: 0.2em;
+}
+
+
+/* Animations */
+@keyframes fade {
+    50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flip1 {
+    0% {
+        display: inline;
+        visibility: visible;
+    }
+    30% {
+        display: none;
+        visibility: hidden;
+    }
+    100% {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@keyframes flip2 {
+    0% {
+        display: none;
+        visibility: hidden;
+    }
+    30% {
+        display: none;
+        visibility: hidden;
+    }
+    100% {
+        display: inline;
+        visibility: visible;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 24%;
+    }
+    50% {
+        top: 26%;
+    }
+    100% {
+        top: 24%;
+    }
+}

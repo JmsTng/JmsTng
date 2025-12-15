@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="./cube.css" />
+        <link rel="stylesheet" href="./styles.css" />
+
+        <title>JmsTng</title>
+    </head>
+    <body>
+        <div id="cube-container">
+            <div class="cube" id="back"></div>
+            <div class="cube" id="front"></div>
+            <div class="cube" id="left">
+                <span class="rev1" id="greet">Hi!</span>
+                <span class="rev2" id="links">
+                    <a class="small hover" id="projects-link" onclick="change('projects')">projects</a><br/>
+                    <a class="small hover" id="photos-link" onclick="change('photos')">photos</a><br/>
+                    <a class="small hover" id="contact-link" onclick="change('contact')">contact me</a>
+                </span>
+            </div>
+            <div class="cube" id="right">
+                I'm <span class="y hover" id="name" onclick="change('home')">James</span>.
+            </div>
+            <div class="cube" id="bottom"></div>
+        </div>
+        <div id="home">
+            <div class="mute center-block" id="scrollhint">
+                psst! scroll down
+            </div>
+            <div id="bio">
+                <p class="mute">student - programmer - photographer</p>
+                <p>a high school student who enjoys taking pictures, coding, and reading up on random STEM topics.</p>
+            </div>
+        </div>
+        <div class="section" id="projects">
+            <h1><a class="hover" onclick="change('home')">..</a> / <a class="hover">projects</a></h1>
+        </div>
+        <div class="section" id="photos">
+            <h1><a class="hover" onclick="change('home')">..</a> / <a class="hover">photos</a></h1>
+        </div>
+        <div class="section" id="contact">
+            <h1><a class="hover" onclick="change('home')">..</a> / <a class="hover">contact</a></h1>
+            <a target="_blank" href="mailto:james.ftung@gmail.com">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path fill="white" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/>
+                </svg>
+                <span class="hover">james.ftung@gmail.com</span>
+            </a><br/>
+            <a target="_blank" href="https://www.linkedin.com/in/james-tung-a17799331/">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path fill="white" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/>
+                </svg>
+                <span class="hover">James Tung</span>
+            </a>
+        </div>
+
+        <script src="./scroll.js"></script>
+        <script src="./pages.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+  --bio-pad: 5em;
+  
+  --red: #FF1020;
+  --green: #35FF30;
+  --blue: #10BBFF;
+  --yellow: #FFDD20;
+  
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  
+  font-size: 1.25em;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #272624;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Utility Classes */
+.inter-h1 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.mono-h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.link { color: var(--red); }
+
+.emph { color: var(--blue); }
+
+.hl-green { color: var(--green); }
+
+.hl-yellow { color: var(--yellow); }
+
+.center-block {
+  text-align: center;
+}
+
+.mute {
+  color: #808080;
+  font-style: italic;
+}
+
+.dash {
+  list-style-type: "-  ";
+}
+
+
+/* Tags */
+body {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0.4em;
+}
+
+#intro {
+  display: flex;
+}
+
+#cube-container {
+  width: 50%;
+}
+
+#bio {
+  height: 100vh;
+  width: calc(50vw - 2 * var(--bio-pad));
+  padding: var(--bio-pad);
+  
+  background-color: #303030;
+}

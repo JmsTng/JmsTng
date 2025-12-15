@@ -1,0 +1,107 @@
+:root {
+  --cube-font-size: 56px;
+  --cube-size: 4em;
+  --cube-pad-x: 0.25em;
+  --cube-pad-y: 0.75em;
+  --border-width: 3px;
+  --translation-factor: 1.3;
+}
+
+.cube {
+  position: fixed;
+  width: calc(var(--cube-size) - var(--cube-pad-x) - 2 * var(--border-width) + 1px);
+  height: calc(var(--cube-size) - var(--cube-pad-y) - 2 * var(--border-width) + 1px);
+
+  margin: calc(50vh - var(--cube-size) / 2) calc(50vw - var(--cube-size) / 2);
+  padding-left: var(--cube-pad-x);
+  padding-top: var(--cube-pad-y);
+
+  color: #FFFFFF;
+  font-size: var(--cube-font-size);
+
+  border: var(--border-width) #FFFFFF solid;
+  background-color: #272624;
+
+  will-change: transform;
+}
+
+#bottom {
+  animation: spinBottom 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--cube-scroll) * -1s);
+
+  z-index: 2;
+}
+
+#left {
+  animation: spinLeft 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+#right {
+  animation: spinRight 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+#front {
+  animation: spinFront 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+#back {
+  animation: spinBack 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--cube-scroll) * -1s);
+}
+
+
+/* Spinning Animation */
+@keyframes spinBottom {
+  0%   { transform: rotateX(-105deg) rotateZ(-45deg) translateZ(2em); }
+  50%  { transform: rotateX(-105deg) rotateZ(315deg) translateZ(2em) translate(0); }
+  60%  { transform: rotateX(-105deg) rotateZ(315deg) translateZ(2em) translateX(calc(-1 * var(--translation-factor) * var(--cube-size))) translateY(calc(var(--translation-factor) * var(--cube-size))); }
+  100% { transform: rotateX(-105deg) rotateZ(315deg) translateZ(2em) translateX(calc(-1 * var(--translation-factor) * var(--cube-size))) translateY(calc(var(--translation-factor) * var(--cube-size))); }
+}
+
+@keyframes spinLeft {
+  0%   { transform: rotateX(15deg) rotateY(-45deg) translateZ(2em); }
+  50%  { transform: rotateX(15deg) rotateY(-405deg) translateZ(2em); }
+  60%  { transform: rotateX(15deg) rotateY(-405deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+  100% { transform: rotateX(15deg) rotateY(-405deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+
+  12.5% { z-index: 0; }
+  50%   { z-index: 1; }
+}
+
+@keyframes spinRight {
+  0%   { transform: rotateX(15deg) rotateY(45deg) translateZ(2em); }
+  50%  { transform: rotateX(15deg) rotateY(-315deg) translateZ(2em); }
+  60%  { transform: rotateX(15deg) rotateY(-315deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+  100% { transform: rotateX(15deg) rotateY(-315deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+
+  37.5% { z-index: 0; }
+  62.5% { z-index: 1; }
+}
+
+@keyframes spinFront {
+  0%   { transform: rotateX(15deg) rotateY(-225deg) translateZ(2em); }
+  50%  { transform: rotateX(15deg) rotateY(-585deg) translateZ(2em); }
+  60%  { transform: rotateX(15deg) rotateY(-585deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+  100% { transform: rotateX(15deg) rotateY(-585deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+
+  12.5% { z-index: 1; }
+  50%   { z-index: 0; }
+}
+
+@keyframes spinBack {
+  0%   { transform: rotateX(15deg) rotateY(-135deg) translateZ(2em); }
+  50%  { transform: rotateX(15deg) rotateY(-495deg) translateZ(2em); }
+  60%  { transform: rotateX(15deg) rotateY(-495deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+  100% { transform: rotateX(15deg) rotateY(-495deg) translateZ(2em) translateY(calc(3 * var(--translation-factor) * var(--cube-size) / -8)); }
+
+  37.5% { z-index: 1; }
+  62.5% { z-index: 0; }
+}

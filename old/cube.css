@@ -1,0 +1,44 @@
+:root {
+  --cube-font-size: 56px;
+  --cube-size: 4em;
+  --cube-pad-x: 0.25em;
+  --cube-pad-y: 0.75em;
+  --border-width: 3px;
+}
+
+.cube {
+  position: fixed;
+  width: calc(var(--cube-size) - var(--cube-pad-x) - 2 * var(--border-width) + 1px);
+  height: calc(var(--cube-size) - var(--cube-pad-y) - 2 * var(--border-width) + 1px);
+
+  margin: calc(50vh - var(--cube-size) / 2) calc(25vw - var(--cube-size) / 2);
+  padding-left: var(--cube-pad-x);
+  padding-top: var(--cube-pad-y);
+
+  color: #FFFFFF;
+  font-size: var(--cube-font-size);
+
+  border: var(--border-width) #FFFFFF solid;
+  background-color: #272624;
+}
+
+
+#top {
+/*  background-color: #293535;*/
+  transform: rotateX(105deg) rotateZ(-45deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+#bottom {
+/*  background-color: #293535;*/
+  transform: rotateX(-105deg) rotateZ(-45deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+#left {
+/*  background-color: #253333;*/
+  transform: rotateX(15deg) rotateY(-45deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+#right {
+/*  background-color: #293939;*/
+  transform: rotateX(15deg) rotateY(45deg) translateZ(calc(var(--cube-size) / 2));
+}
